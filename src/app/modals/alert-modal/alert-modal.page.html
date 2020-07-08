@@ -1,0 +1,16 @@
+<ion-content>
+    <div class="ion-padding-start ion-padding-end">
+        <p class="header">Premium Feature!
+            <ion-icon name="star" class="ion-padding-start"></ion-icon>
+        </p>
+        <p class="innerText">Looks's like you are on the Lite version.
+            <ion-icon name="sad" style="font-size:1.2em"></ion-icon>
+        </p>
+        <p class="innerText">{{secText}}</p>
+    </div>
+    <ion-list>
+        <ion-item lines="full"></ion-item>
+        <ion-item lines="full">Get Premium ($0.99)</ion-item>
+        <ion-item lines="full" (click)="closeModal();">Close</ion-item>
+    </ion-list>
+</ion-content>
