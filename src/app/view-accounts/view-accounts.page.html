@@ -1,0 +1,31 @@
+<ion-content>
+    <div style="width:100%">
+        <ion-icon class="ion-padding ion-margin-bottom ion-margin-top" name="close" (click)="closeModal()" style="font-size: 30px;" float-right></ion-icon>
+    </div>
+
+    <div class="ion-padding-start ion-padding-top ion-margin-top">
+        <h1>Accounts</h1>
+    </div>
+
+
+    <ion-card *ngFor="let acc of accounts;let i = index;" class="ion-padding" (click)="presentActionSheet(i)">
+        <ion-card-subtitle>{{acc.getName()}} <span *ngIf="i === active" float-right>ACTIVE</span></ion-card-subtitle>
+        <ion-card-title [ngClass]="{surplus:acc.getBalance() > 0 , 'deficit':acc.getBalance()<0}">${{acc.getBalance()}}</ion-card-title>
+
+        <ion-card-content *ngIf="acc.getTransactions().length !== 0">
+            <p>Latest transaction: {{acc.getTransactions()[acc.getTransactions().length-1].getName()}} <span [ngClass]="{'surplus':acc.getTransactions()[acc.getTransactions().length-1].getType() === 1, 'deficit':acc.getTransactions()[acc.getTransactions().length-1].getType() ===0 }">${{acc.getTransactions()[acc.getTransactions().length-1].getAmount()}}</span></p>
+        </ion-card-content>
+
+        <ion-card-content *ngIf="acc.getTransactions().length === 0">
+            <p>No transactions found!</p>
+        </ion-card-content>
+    </ion-card>
+
+    <div class="ion-padding-bottom">
+        <ion-fab horizontal="center" class="ion-margin-bottom" style="margin-bottom:30px;">
+          <ion-fab-button (click)="showAddAccount()" color="primary">
+            <ion-icon ios="ios-add" md="md-add"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+    </div>
+</ion-content>

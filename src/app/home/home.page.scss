@@ -1,0 +1,19 @@
+@import '../../theme/icons.scss';
+
+ion-card{
+    border: 3px solid #ff6200;
+    background-color: #fff;
+    ion-card-subtitle{
+        color: #303030;
+    }
+    .amount{
+        font-size: 1.6em;
+    }
+
+    .truncate{
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

@@ -1,0 +1,54 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+ion-content {
+    --ion-background-color: #d3d3d3 !important;
+}
+
+.surplus{
+    color: #33A41F;
+}
+
+.deficit{
+    color: #FF0000;
+}
+
+p{
+    color: #000000;
+}
+
+h1{
+    color: #ff6200;
+}
+
+
+.alertModal{
+    top:10%;
+    width: 80%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.aboutModal{
+    top:20%;
+    width: 80%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}

@@ -1,0 +1,30 @@
+<ion-content>
+    <div style="width:100%">
+        <ion-icon class="ion-padding ion-margin-bottom ion-margin-top" name="close" style="font-size: 30px;" float-right (click)="closeModal()"></ion-icon>
+    </div>
+
+    <div class="ion-padding-start ion-padding-top ion-margin-top">
+        <h1>Add an Account!</h1>
+        <!-- Number type input -->
+    </div>
+
+    <div>
+        <ion-item lines="full" >
+          <ion-label position="stacked"  color="primary" class="input-label">Account name</ion-label>
+          <ion-input type="text" value="" autocapitalize=sentences [ngClass]="{warn: warning}" [(ngModel)]="nameVal"></ion-input>
+        </ion-item>
+
+        <ion-item lines="full">
+          <ion-label position="stacked" color="primary" class="input-label">Initial balance</ion-label>
+          <input type="text" pattern="[0-9]*" class="custom-input" value="0.0" decimal=true [ngClass]="{warn: amountWarning}" [(ngModel)]="balVal">
+        </ion-item>
+
+    </div>
+
+    <ion-fab vertical="bottom" slot="fixed" horizontal="end" class="ion-margin-bottom">
+        <ion-fab-button (click)="addAccount()" color="primary">
+           <ion-icon ios="ios-add" md="md-add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

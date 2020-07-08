@@ -1,0 +1,19 @@
+ion-icon {
+   &[class*="custom-"] {
+      mask-size: contain;
+      mask-position: 50% 50%;
+      mask-repeat: no-repeat;
+      background: currentColor;
+      width: 1em;
+      height: 1em;
+   }
+   &[class*="custom-account-icon"] {
+      mask-image: url(/assets/balance.svg);
+   }
+   &[class*="custom-transaction-icon"] {
+      mask-image: url(/assets/transaction.svg);
+   }
+   &[class*="custom-barcode-icon"] {
+      mask-image: url(/assets/barcode.svg);
+   }
+}

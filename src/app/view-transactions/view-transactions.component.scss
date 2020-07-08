@@ -1,0 +1,12 @@
+.transaction-list{
+    margin-bottom: 0.375em;
+}
+.tName{
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}

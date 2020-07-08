@@ -1,0 +1,7 @@
+{
+  "name": "QcK",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
